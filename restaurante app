@@ -1,0 +1,42 @@
+import os
+def exibir_nome_do_programa():
+ print('𝔰𝔞𝔟𝔬𝔯 𝔢𝔵𝔭𝔯𝔢𝔰𝔰\n')
+
+def exibir_opções():
+  print('1. cadastra restaurante')
+  print('2. listar restaurante')
+  print('3. ativar restaurante')
+  print('4. sair\n')
+
+def opção_invalida():
+    print('opção ivalida!\n')
+    input('digite um tecla paravoltar a menu pricipal')
+    main()
+
+def escolher_opção():
+  try:
+    opção_escolhida = int(input('escolha um opção:'))
+          # opção_escolhida = int('escolha um opção:')
+    if opção_escolhida ==1:
+      print('cadastrar restaurante')
+    elif opção_escolhida ==2:
+            print('listar restaurantes')
+    elif opção_escolhida ==3:
+            print('ativar restaurante')
+    elif opção_escolhida ==4:
+            finalizar_app() 
+
+    else:
+      opção_invalida()
+
+  except:
+      opção_invalida()
+
+def main():
+  os.system('cls')
+  exibir_nome_do_programa()
+  exibir_opções()
+
+
+if __name__=='__main__':  
+ main()
